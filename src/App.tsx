@@ -1,6 +1,8 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import RootLayout from "./root/root-layout";
-import HomePage from "./pages/home-page";
+import React from "react";
+
+const HomePage = React.lazy(() => import("./pages/home-page"));
 
 function App() {
   const routes = createBrowserRouter([
